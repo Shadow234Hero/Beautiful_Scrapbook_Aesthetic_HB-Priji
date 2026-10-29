@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2ede1">
+<title>For Priji ♥</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@500;700&family=Caveat+Brush&family=Poppins:wght@400;600;800&family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-screen="pass">
+
+<!-- SVG Definitions for Stamp, Seals, Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Gift box symbol -->
+    <symbol id="i-gift" viewBox="0 0 120 120">
+      <polygon points="12,36 60,58 60,106 12,84" fill="#d9bb83"/>
+      <polygon points="108,36 60,58 60,106 108,84" fill="#c4a068"/>
+      <polygon points="60,14 108,36 60,58 12,36" fill="#efdcb2"/>
+      <polygon points="30,44.25 42,49.75 42,97.75 30,92.25" fill="#f9f1da"/>
+      <polygon points="72,52.5 84,47 84,95 72,100.5" fill="#e6d9b4"/>
+      <polygon points="30,44.25 42,49.75 90,27.75 78,22.25" fill="#fffaea"/>
+      <polygon points="72,52.5 84,47 36,25 24,30.5" fill="#fffaea"/>
+      <g fill="#fffaea" stroke="#cdbb8a" stroke-width="1.2">
+        <ellipse cx="46" cy="28" rx="12" ry="7" transform="rotate(-28 46 28)"/>
+        <ellipse cx="68" cy="28" rx="12" ry="7" transform="rotate(28 68 28)"/>
+      </g>
+      <circle cx="57" cy="35" r="5" fill="#f1e5c2" stroke="#cdbb8a" stroke-width="1.2"/>
+    </symbol>
+
+    <!-- Heart symbol -->
+    <symbol id="i-heart" viewBox="0 0 100 100">
+      <path d="M50 88C20 62 8 44 8 30 8 18 17 10 28 10 37 10 45 15 50 23 55 15 63 10 72 10 83 10 92 18 92 30 92 44 80 62 50 88Z"/>
+    </symbol>
+
+    <!-- Wax seal -->
+    <symbol id="i-seal" viewBox="0 0 100 100">
+      <path d="M50 4c7 0 9 6 15 7s12-3 17 2 1 11 4 17 10 8 10 15-7 8-9 15 2 12-4 17-11 1-17 4-8 10-16 10-9-7-16-10-12 1-17-4-1-11-4-17-9-8-9-15 7-9 9-15-2-12 3-17 11-1 17-2S43 4 50 4Z" fill="#a31824"/>
+      <circle cx="50" cy="50" r="31" fill="none" stroke="#7a0f1a" stroke-width="3"/>
+      <circle cx="50" cy="50" r="27" fill="#b4202e"/>
+      <use href="#i-heart" x="28" y="29" width="44" height="44" fill="#7a0f1a"/>
+      <use href="#i-heart" x="28" y="26" width="44" height="44" fill="#d9404f"/>
+    </symbol>
+
+    <!-- Lily flower sticker -->
+    <symbol id="i-lily" viewBox="0 0 100 100">
+      <g fill="#fff" stroke="#d9d2c0" stroke-width="1.2">
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(0 50 50)"/>
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(60 50 50)"/>
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(120 50 50)"/>
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(180 50 50)"/>
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(240 50 50)"/>
+        <ellipse cx="50" cy="24" rx="10" ry="26" transform="rotate(300 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="6" fill="#b9892b"/>
+    </symbol>
+
+    <!-- Envelope sticker -->
+    <symbol id="i-env" viewBox="0 0 100 70">
+      <rect x="3" y="3" width="94" height="64" rx="5" fill="#fffaf0" stroke="#e8d9d9" stroke-width="2"/>
+      <path d="M5 6 50 40 95 6" fill="none" stroke="#d8c6c6" stroke-width="2.5"/>
+      <use href="#i-heart" x="38" y="22" width="24" height="24" fill="#c8232f"/>
+    </symbol>
+
+    <!-- Camera sticker -->
+    <symbol id="i-cam" viewBox="0 0 90 70">
+      <rect x="4" y="16" width="82" height="50" rx="9" fill="#1d1d1f" stroke="#fff" stroke-width="3.5"/>
+      <rect x="28" y="6" width="22" height="14" rx="4" fill="#1d1d1f" stroke="#fff" stroke-width="3.5"/>
+      <circle cx="45" cy="41" r="17" fill="#2d2d31" stroke="#fff" stroke-width="3.5"/>
+      <circle cx="45" cy="41" r="9" fill="#8fb7e8"/>
+    </symbol>
+
+    <!-- Lips sticker -->
+    <symbol id="i-lips" viewBox="0 0 70 44">
+      <path d="M4 22C14 4 26 8 35 13 44 8 56 4 66 22 56 40 14 40 4 22Z" fill="#c8283a"/>
+    </symbol>
+  </defs>
+</svg>
+
+<audio id="bgm" loop preload="auto"></audio>
+<button class="mute" id="mute" type="button" aria-label="Music on/off" aria-pressed="false">&#9834;</button>
+<button class="back" type="button" data-back>&larr; gifts</button>
+
+<main id="app">
+
+  <!-- ================= 1. PASSCODE SCREEN ================= -->
+  <section class="screen paper" id="s-pass" aria-label="Enter passcode">
+    <div class="strip" data-torn="right" data-amp="7"><b data-strip>PRIJI</b></div>
+    <div class="sticker web-a" data-web></div>
+    <div class="sticker web-b" data-web></div>
+
+    <div class="pass-grid">
+      <div class="pass-card">
+        <h1 id="pass-title">Enter Passcode</h1>
+        <div class="pframe">
+          <div class="frame stamp"><div class="mat"><img id="p-photo" alt="Priji" decoding="async"></div></div>
+          <i class="tape"></i>
+        </div>
+        <div class="display">
+          <div class="slots" id="slots" role="status" aria-live="polite"></div>
+          <p class="wrong" id="wrong" aria-live="assertive"></p>
+        </div>
+        <div class="keys" id="keys" role="group" aria-label="Keypad"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. INTRO SCREEN ================= -->
+  <section class="screen paper" id="s-intro" aria-label="Welcome">
+    <div class="strip" data-torn="right" data-amp="7"><b data-strip>PRIJI</b></div>
+    <div class="sticker web-a" data-web></div>
+    <div class="sticker web-b" data-web></div>
+
+    <div class="intro-grid">
+      <div class="polaroid" id="polaroid">
+        <img id="i-photo" alt="Priji" decoding="async">
+        <span class="datestamp" id="i-date">01/01/2025</span>
+        <i class="tape"></i>
+      </div>
+      <div class="tag-wrap">
+        <p class="tagline"><span id="i-l1">You are my</span><br><span id="i-l2">reason to smile</span></p>
+        <span class="heart h1"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></span>
+        <span class="heart h2"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></span>
+        <p class="hint" id="i-hint">tap to open your scrapbook & puzzles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. HUB / MENU SCREEN ================= -->
+  <section class="screen gingham" id="s-hub" aria-label="Scrapbook & Puzzle Hub">
+    <h2 class="hub-title" id="hub-title">Choose Your Gift</h2>
+
+    <!-- Tab toggle between Main Scrapbook Gifts and Love Puzzles -->
+    <div class="hub-nav-tabs">
+      <button class="tab-btn active" data-tab="gifts-view">🎁 Keepsake Gifts</button>
+      <button class="tab-btn" data-tab="puzzles-view">🧩 Love Puzzles & Chapters</button>
+    </div>
+
+    <!-- View 1: 3 Main Gift Boxes -->
+    <div class="stage-view active" id="v-gifts">
+      <div class="stage">
+        <button class="gift" type="button" data-gift="1" aria-label="Gift 1">
+          <svg viewBox="0 0 120 120"><use href="#i-gift"/></svg>
+          <span class="gift-label">Postcard Letter</span>
+        </button>
+        <button class="gift" type="button" data-gift="2" aria-label="Gift 2">
+          <svg viewBox="0 0 120 120"><use href="#i-gift"/></svg>
+          <span class="gift-label">5 Reasons I Love You</span>
+        </button>
+        <button class="gift" type="button" data-gift="3" aria-label="Gift 3">
+          <svg viewBox="0 0 120 120"><use href="#i-gift"/></svg>
+          <span class="gift-label">Film Strip & Memories</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- View 2: Interactive Puzzle Chapters Grid -->
+    <div class="stage-view" id="v-puzzles">
+      <div class="chapter-tickets-container">
+        <p class="ch-intro-text">Solve each chapter puzzle to unlock Omm's hidden love story ♥</p>
+        <div class="chapter-tickets-grid" id="chapter-tickets">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GIFT 1 : POSTCARD ================= -->
+  <section class="screen paper" id="s-g1" aria-label="Gift one: a letter">
+    <div class="page">
+      <div class="g1">
+        <div class="pframe">
+          <div class="frame stamp"><div class="mat"><img id="g1-photo" alt="Priji" decoding="async"></div></div>
+          <i class="tape"></i>
+        </div>
+        <div class="card-wrap">
+          <article class="postcard">
+            <span class="postage"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></span>
+            <div class="letter" id="g1-text"></div>
+          </article>
+          <svg class="seal" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-seal"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="sticker web-c" data-web></div>
+  </section>
+
+  <!-- ================= GIFT 2 : 5 REASONS ================= -->
+  <section class="screen paper alt" id="s-g2" aria-label="Gift two: five reasons">
+    <div class="page">
+      <div class="g2">
+        <div class="pol2">
+          <img id="g2-photo" alt="Priji" decoding="async">
+          <p class="cap" id="g2-cap"></p>
+          <svg class="cam" viewBox="0 0 90 70" aria-hidden="true"><use href="#i-cam"/></svg>
+          <svg class="lips" viewBox="0 0 70 44" aria-hidden="true"><use href="#i-lips"/></svg>
+        </div>
+        <div class="note-wrap">
+          <div class="note stamp">
+            <h2 id="g2-title">5 REASONS I LOVE YOU</h2>
+            <ul id="g2-list"></ul>
+          </div>
+          <svg class="lily" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-lily"/></svg>
+          <svg class="env" viewBox="0 0 100 70" aria-hidden="true"><use href="#i-env"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="sticker web-c" data-web></div>
+  </section>
+
+  <!-- ================= GIFT 3 : FILM STRIP ================= -->
+  <section class="screen gingham" id="s-g3" aria-label="Gift three: a long letter">
+    <div class="page">
+      <div class="g3">
+        <div class="film" id="film" aria-label="Photos"></div>
+        <div class="paper3-wrap">
+          <article class="paper3" data-torn="all" data-amp="6">
+            <div class="letter" id="g3-text"></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 1 : LOVE METER / EDIT ================= -->
+  <section class="screen paper" id="s-ch1" aria-label="Chapter 1: Love Meter">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 01</div>
+        <h2 class="ch-title">Woh Din Jab Baat Shuru Hui</h2>
+        <p class="ch-subtitle">Choose the exact dial to unlock our start</p>
+
+        <div class="love-dial-game">
+          <div class="dial-display">
+            <span class="dial-num" id="dial-val">100%</span>
+          </div>
+          <div class="dial-controls">
+            <button class="scrap-btn" id="dial-minus">- 10%</button>
+            <button class="scrap-btn" id="dial-plus">+ 10%</button>
+          </div>
+          <p class="dial-hint">Target: <b>500%</b> (Be-Intehaan Love)</p>
+          <button class="scrap-gold-btn" id="ch1-check">Lock Answer ♥</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 2 : MEMORY MATCH ================= -->
+  <section class="screen paper alt" id="s-ch2" aria-label="Chapter 2: Memory Match">
+    <div class="page">
+      <div class="scrap-card-box wide">
+        <div class="ch-badge">CHAPTER 02</div>
+        <h2 class="ch-title">Memory Card Pairs</h2>
+        <p class="ch-subtitle">Flip cards to match the keepsake photo pairs</p>
+
+        <div class="memory-grid" id="memory-board">
+          <!-- Cards populated by JS -->
+        </div>
+        <div class="game-status-bar">
+          <span id="mem-status">Matches: 0 / 4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 3 : FLIRT RIDDLES ================= -->
+  <section class="screen paper" id="s-ch3" aria-label="Chapter 3: Flirt Riddles">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 03</div>
+        <h2 class="ch-title">Flirt Riddles</h2>
+        <p class="ch-subtitle">Arrange the word tiles into the correct romantic sentence!</p>
+
+        <div class="riddle-box">
+          <p class="riddle-prompt" id="riddle-hint">Hint: "How do you make Omm blush?"</p>
+          <div class="answer-slots" id="riddle-answer-zone">
+            <!-- Selected tiles land here -->
+          </div>
+          <div class="tiles-pool" id="riddle-tiles-pool">
+            <!-- Tile choices -->
+          </div>
+          <div class="riddle-actions">
+            <button class="scrap-btn" id="riddle-reset">Clear</button>
+            <button class="scrap-gold-btn" id="riddle-submit">Check Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 4 : THREE WORD LETTER ================= -->
+  <section class="screen paper alt" id="s-ch4" aria-label="Chapter 4: Anagram Letter">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 04</div>
+        <h2 class="ch-title">Teen Shabd, Poori Baat</h2>
+        <p class="ch-subtitle">Unscramble the letters to reveal the 3 words Omm says every day!</p>
+
+        <div class="anagram-box">
+          <div class="scrambled-words" id="anagram-prompt">
+            <span class="word-scramble">I</span>
+            <span class="word-scramble">E O V L</span>
+            <span class="word-scramble">O Y U</span>
+          </div>
+          <input type="text" class="scrap-input" id="anagram-input" placeholder="Type answer here..." autocomplete="off">
+          <button class="scrap-gold-btn" id="anagram-check">Submit Secret</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 5 : VOICE NOTE & PATTERN ================= -->
+  <section class="screen paper" id="s-ch5" aria-label="Chapter 5: Voice Note Pattern">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 05</div>
+        <h2 class="ch-title">Glowing Heart Sequence</h2>
+        <p class="ch-subtitle">Repeat the glowing heart pattern to unlock Omm's voice note!</p>
+
+        <div class="simon-box">
+          <div class="pads-grid">
+            <button class="heart-pad p-red" data-pad="0"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></button>
+            <button class="heart-pad p-gold" data-pad="1"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></button>
+            <button class="heart-pad p-pink" data-pad="2"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></button>
+            <button class="heart-pad p-deep" data-pad="3"><svg viewBox="0 0 100 100"><use href="#i-heart"/></svg></button>
+          </div>
+          <p class="simon-status" id="simon-status">Tap 'Start Pattern' to watch</p>
+          <button class="scrap-gold-btn" id="simon-start">Start Pattern</button>
+        </div>
+
+        <div class="voice-note-player" id="voice-player" style="display:none; margin-top: 20px;">
+          <p class="voice-unlocked-msg">🎙️ Voice Note Unlocked!</p>
+          <audio controls id="voice-audio" src="assets/media/voice-note.mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 6 : OMM & PRIJI QUIZ ================= -->
+  <section class="screen paper alt" id="s-ch6" aria-label="Chapter 6: Quiz">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 06</div>
+        <h2 class="ch-title">Kitna Jaanti Ho Omm Ko?</h2>
+        <p class="ch-subtitle">Answer these special questions about us!</p>
+
+        <div class="quiz-box" id="quiz-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 7 : CATCH HEARTS ================= -->
+  <section class="screen paper" id="s-ch7" aria-label="Chapter 7: Catch Hearts">
+    <div class="page">
+      <div class="scrap-card-box wide">
+        <div class="ch-badge">CHAPTER 07</div>
+        <h2 class="ch-title">Dil Pakdo, Girne Se Pehle</h2>
+        <p class="ch-subtitle">Tap 14 falling hearts before they reach the bottom!</p>
+
+        <div class="catch-arena" id="catch-arena">
+          <div class="catch-score">Hearts Caught: <b id="catch-count">0</b> / 14</div>
+          <div class="catch-playfield" id="catch-playfield"></div>
+          <button class="scrap-gold-btn" id="catch-start">Start Falling Hearts</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 8 : IMAGE REVEALING SUDOKU ================= -->
+  <section class="screen paper alt" id="s-ch8" aria-label="Chapter 8: Sudoku">
+    <div class="page">
+      <div class="scrap-card-box wide">
+        <div class="ch-badge">CHAPTER 08</div>
+        <h2 class="ch-title">Dil Ki Sudoku</h2>
+        <p class="ch-subtitle">Fill in the 4x4 mini Sudoku! Each correct number reveals our hidden photo piece by piece.</p>
+
+        <div class="sudoku-container">
+          <div class="sudoku-grid" id="sudoku-grid"></div>
+          <div class="sudoku-keypad-row">
+            <button class="sudoku-num" data-num="1">1</button>
+            <button class="sudoku-num" data-num="2">2</button>
+            <button class="sudoku-num" data-num="3">3</button>
+            <button class="sudoku-num" data-num="4">4</button>
+            <button class="scrap-btn" id="sudoku-clear">Clear</button>
+          </div>
+          <p class="sudoku-msg" id="sudoku-msg">Fill the grid correctly to reveal the memory!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 9 : SCRATCH CARD ================= -->
+  <section class="screen paper" id="s-ch9" aria-label="Chapter 9: Scratch Card">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 09</div>
+        <h2 class="ch-title">Dil Ki Chhupi Baat</h2>
+        <p class="ch-subtitle">Scratch off the pink wax coating to read Omm's secret message!</p>
+
+        <div class="scratch-wrap">
+          <div class="scratch-underlay">
+            <p>Tum meri sabse khoobsurat duaa ho, Priji.<br>Har subah tumhara naam lekar shuru hoti hai ♥</p>
+          </div>
+          <canvas id="scratch-canvas" width="320" height="180"></canvas>
+        </div>
+        <p class="scratch-percent" id="scratch-status">Scratch with your finger or mouse!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 10 : BALLOONS SPELLING ================= -->
+  <section class="screen paper alt" id="s-ch10" aria-label="Chapter 10: Balloons">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 10</div>
+        <h2 class="ch-title">Gubbare Phodo, Naam Banao</h2>
+        <p class="ch-subtitle">Pop balloons in the correct order to spell P - R - I - J - I!</p>
+
+        <div class="spelling-display" id="balloon-spelled-zone">
+          <span class="b-slot">_</span><span class="b-slot">_</span><span class="b-slot">_</span><span class="b-slot">_</span><span class="b-slot">_</span>
+        </div>
+
+        <div class="balloons-field" id="balloons-field">
+          <!-- Pop balloons generated by JS -->
+        </div>
+        <button class="scrap-btn" id="balloon-reset">Reset Balloons</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUZZLE CHAPTER 11 : FIND MY HEART ================= -->
+  <section class="screen paper" id="s-ch11" aria-label="Chapter 11: Find My Heart">
+    <div class="page">
+      <div class="scrap-card-box">
+        <div class="ch-badge">CHAPTER 11</div>
+        <h2 class="ch-title">Mera Dil Kahan Chhupa Hai?</h2>
+        <p class="ch-subtitle">Watch carefully as the cups slide and swap! Find Omm's heart 3 times.</p>
+
+        <div class="cups-game">
+          <div class="cups-row" id="cups-row">
+            <div class="heart-target" id="heart-target">♥</div>
+            <button class="cup-btn" data-index="0" style="left: 10px;"><div class="cup-icon">🥛</div></button>
+            <button class="cup-btn" data-index="1" style="left: 110px;"><div class="cup-icon">🥛</div></button>
+            <button class="cup-btn" data-index="2" style="left: 210px;"><div class="cup-icon">🥛</div></button>
+          </div>
+          <div class="cups-status" style="margin-top: 110px;">
+            <span>Wins: <b id="cup-wins">0</b> / 3</span>
+          </div>
+          <button class="scrap-gold-btn" id="cup-shuffle-btn">Start Shuffle</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINALE SCREEN : BIRTHDAY CAKE & LOVE LETTER ================= -->
+  <section class="screen paper alt" id="s-finale" aria-label="Finale: Birthday Celebration">
+    <div class="page">
+      <div class="scrap-card-box wide finale-box">
+        <div class="ch-badge">FINALE</div>
+        <h2 class="ch-title">Happy Birthday, Priji ♥</h2>
+        <p class="ch-subtitle">Blow out the candles on your scrapbook cake!</p>
+
+        <div class="cake-container">
+          <div class="candles-row">
+            <button class="candle lit" data-candle="0"><i class="flame"></i></button>
+            <button class="candle lit" data-candle="1"><i class="flame"></i></button>
+            <button class="candle lit" data-candle="2"><i class="flame"></i></button>
+            <button class="candle lit" data-candle="3"><i class="flame"></i></button>
+            <button class="candle lit" data-candle="4"><i class="flame"></i></button>
+          </div>
+          <div class="cake-tier">
+            <span>Priji ♥</span>
+          </div>
+        </div>
+
+        <div class="closing-letter" id="finale-letter">
+          <p>Saari chapters tumne khol diye — par sach toh yeh hai ki meri saari kahaani tumse hi shuru hoti hai.</p>
+          <p>Har 8 November, har 30 May, aur beech ke saare din — be-intehaan tumhare naam.</p>
+          <p class="sign">— Always Yours, Omm ♥</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
