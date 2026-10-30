@@ -19,10 +19,7 @@ REPLACE PHOTOS
 REPLACE THE SONG
   Put an mp3 in assets/music/ and change the "music" line in config.js.
 
-PUT IT ONLINE (so you can send a link)
-  Easiest: go to app.netlify.com/drop and drag this whole folder in. You get a link to send her.
-  Note: the passcode is a light lock only. Anyone with the link can look at the code in config.js,
-  so don't use it for anything secret.
+you can use this by simply uploading on github which i already did😘
 
 The song starts after the first tap on the keypad (browsers don't allow music before a tap).
 The round button at the top right turns the music on/off.
