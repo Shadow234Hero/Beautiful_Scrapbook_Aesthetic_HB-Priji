@@ -377,8 +377,8 @@
 
   // Chapter 6: Quiz
   const quizData = [
-    { q: "What is Omm's absolute favourite thing about Priji?", opts: ["Her laugh", "Her smile & eyes", "Her cooking", "Her sense of humor"], ans: 1 },
-    { q: "What does Omm promise Priji forever?", opts: ["To bring chocolates", "To love her unconditionally", "To play video games", "To take her shopping"], ans: 1 }
+    { q: "What kills Omm about Priji?", opts: ["Her laugh", "Her smile & eyes", "Her Angriness", "Her sense of humor"], ans: 1 },
+    { q: "What does Omm promise Priji forever?", opts: ["To Marry her", "To love her unconditionally", "To play video games with her", "Har chiz toh promise krdeta h"], ans: 1 }
   ];
   let qIdx = 0;
 
