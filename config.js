@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
   pageTitle: "For Priji ♥",
 
   /* ---------- PASSCODE ---------- */
-  passcode: "1234",                       // Passcode to unlock site
+  passcode: "0811",                       // Passcode to unlock site
   passTitle: "Enter Passcode",
   wrongText: "Not quite... try again ♥",
   stripText: "PRIJI",                     // Big text on left red strip
@@ -42,9 +42,9 @@ window.SITE_CONFIG = {
   gift1: {
     greeting: "Dear Priji,",
     paragraphs: [
-      "I built this little website scrapbook just for you to bring a smile to your face.",
-      "Every single moment spent with you feels like magic. Thank you for being my favourite person in the entire world.",
-      "Solve the 11 puzzle chapters in the menu to discover all our hidden memories!"
+      "As always, I put some efforts in making this beautiful aesthetic website for your beautiful smile to your facee.",
+      "idk how to say thank you in the best possible way. Thank You soooooooooooo much for being my favourite person in the entire world.",
+      "I love you 3000"
     ],
     signoff: "Always yours,",
     signature: "Omm"
@@ -52,23 +52,23 @@ window.SITE_CONFIG = {
 
   /* ---------- GIFT 2 : 5 REASONS I LOVE YOU ---------- */
   gift2: {
-    title: "5 REASONS I LOVE YOU",
+    title: "Why You??",
     reasons: [
-      "You make me the happiest person whenever you're around",
-      "You have the most beautiful smile that lights up my whole day",
-      "I love how thoughtful and kind you are to everyone",
-      "Your eyes hold a warmth that makes me feel right at home",
-      "You love me completely for who I am"
+      "You make me the happiest person ever just bcz I am yours😳",
+      "aapko tease krne se mujhe sukooon milta h😘",
+      "I love how lovely and kind you are to everyone",
+      "haaye teri ankhein👀😭😭🫡",
+      "Sb faltu likha h idk why you... but always you..."
     ],
-    caption: "us ♥"
+    caption: "Hottie 😳"
   },
 
   /* ---------- GIFT 3 : FILM-STRIP LETTER ---------- */
   gift3: {
     paragraphs: [
-      "Looking back at all our photos and memories fills my heart with so much gratitude.",
-      "No matter how much time passes, my feelings for you only grow deeper and stronger.",
-      "Thank you for being my constant happiness and my dream come true."
+      "Looking back at all your photos and memories fills my heart literally rona aajata h dekhte hi😭😭.",
+      "No matter how much time passes, my feelings for you only grow deeper and stronger...",
+      "Thank you for being MY PRIJI. thank you so so damnn much for everything. Dammm you are mine😳😳."
     ],
     signature: "— Forever & Always, Omm"
   },
@@ -76,15 +76,15 @@ window.SITE_CONFIG = {
   /* ---------- 11 PUZZLE CHAPTERS DATA ---------- */
   puzzles: [
     { id: "ch1", num: "01", title: "Love Meter", desc: "Set the dial to 500% love", targetDial: 500 },
-    { id: "ch2", num: "02", title: "Memory Pairs", desc: "Match photo pairs", pairs: 4 },
-    { id: "ch3", num: "03", title: "Flirt Riddles", desc: "Unscramble sentence", targetSentence: "YOU MAKE OMM BLUSH" },
-    { id: "ch4", num: "04", title: "Secret Words", desc: "Unscramble 3 words", answer: "I LOVE YOU" },
+    { id: "ch2", num: "02", title: "Memory Pair Game", desc: "Match photo pairs", pairs: 4 },
+    { id: "ch3", num: "03", title: "Riddles", desc: "Unscramble sentence", targetSentence: "YOU MAKE OMM BLUSH" },
+    { id: "ch4", num: "04", title: "Secret Words", desc: "Unscramble 5 words", answer: "I LOVE YOU MY PRIJI" },
     { id: "ch5", num: "05", title: "Voice Note Pattern", desc: "Repeat glowing heart pattern", patternLen: 4 },
-    { id: "ch6", num: "06", title: "Omm & Priji Quiz", desc: "Answer questions about us" },
+    { id: "ch6", num: "06", title: "Our Quiz", desc: "Answer questions about us" },
     { id: "ch7", num: "07", title: "Catch Falling Hearts", desc: "Catch 14 hearts", catchTarget: 14 },
     { id: "ch8", num: "08", title: "Memory Jigsaw", desc: "Complete 3x3 photo puzzle" },
     { id: "ch9", num: "09", title: "Scratch Card", desc: "Scratch off secret note" },
-    { id: "ch10", num: "10", title: "Balloon Spell", desc: "Spell P-R-I-J-I" },
+    { id: "ch10", num: "10", title: "Balloon Spell", desc: "Spell P-R-I-J-I Ye toh pta hona chahiye" },
     { id: "ch11", num: "11", title: "Find My Heart", desc: "Find heart under cup 3 times" }
   ]
 };
